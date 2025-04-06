@@ -1,30 +1,38 @@
-# How to Build an AI-Powered Recommendation System
+# GPT-Neo Movie Recommendation System 🎬🤖
 
-Welcome to the **How-to-Build-an-AI-powered-Recommendation-System** repository! 🎉 
-
-This repository provides a comprehensive guide to building recommendation systems using two powerful approaches:
-
-1. **Traditional Recommendation System in Python**
-2. **Recommendation System using Cutting-edge Large Language Models (LLMs)**
-
-The project is designed to help you understand and implement personalized recommendation systems while working with real-world datasets.
+This application is a simple AI-powered movie recommendation tool built using **EleutherAI's GPT-Neo** language model. It takes user input and a given context (such as a movie catalog) and generates natural language recommendations based on that input. The model is hosted locally using the Hugging Face Transformers library, with GPU acceleration via PyTorch.
 
 ---
 
-## 📂 Repository Structure
+## 🚀 What This App Does
 
-```plaintext
-.
-├── datasets/              # Real-world datasets for training and evaluation
-├── AIRecoSystem.ipynb     # Implementation using Python and traditional ML techniques
-├── AIRecoSystem_LLM.ipynb # Implementation using LLMs for recommendations
-├── README.md              # You're here!
+This app allows users to get intelligent movie recommendations by inputting a query (e.g., *"I want to watch an action-packed movie with a great storyline"*). The model considers this user input and matches it against a provided movie context (e.g., a small movie catalog) to generate personalized recommendations in natural language.
 
-```
+---
 
-For a detailed explanation of each step and the fundamentals, read the complete blog: [How to Build an AI-powered Recommendation System?](https://www.projectpro.io/article/how-to-build-an-ai-powered-recommendation-system/1084)
+## 🧠 Technologies & Libraries Used
 
-## 🌟 Acknowledgments
+| Library        | Purpose                                                                 |
+|----------------|-------------------------------------------------------------------------|
+| `transformers` | Loads pre-trained GPT-Neo models and tokenizers from Hugging Face Hub. |
+| `torch`        | Provides GPU-accelerated model inference using PyTorch.                |
+| `datasets`     | (Optional) Used for future data preprocessing or evaluation datasets.  |
+| `accelerate`   | Helps with efficient model loading across CPUs/GPUs.                   |
 
-Special thanks to [shivam1808](https://github.com/shivam1808/Recommendation-System?tab=readme-ov-file) for inspiration for the Python-based recommendation system implementation.
+---
 
+## ⚙️ Installation
+
+Install the required dependencies using pip:
+
+``bash
+pip install transformers datasets accelerate
+
+##How It Works
+The GPT-Neo 1.3B model is loaded from Hugging Face (EleutherAI/gpt-neo-1.3B).
+
+A function generate_recommendations() takes a user query and a context.
+
+GPT-Neo generates textual recommendations based on the input.
+
+The result is displayed in natural language.
